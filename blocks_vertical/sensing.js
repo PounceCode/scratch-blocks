@@ -135,6 +135,28 @@ Blockly.Blocks['sensing_distanceto'] = {
   }
 };
 
+Blockly.Blocks['sensing_tb_distanceToXY'] = {
+
+  init: function() {
+    this.jsonInit({
+      "message0": 'distance to x: %1 y: %2',
+      "args0": [
+        {
+          "type": "input_value",
+          "name": "X"
+        },
+        {
+          "type": "input_value",
+          "name": "Y"
+        }
+      ],
+      "category": Blockly.Categories.sensing,
+      "extensions": ["colours_sensing", "output_number"]
+    });
+  }
+};
+
+
 Blockly.Blocks['sensing_distancetomenu'] = {
   /**
    * "Distance to [Object]" Block Menu.
@@ -173,6 +195,26 @@ Blockly.Blocks['sensing_askandwait'] = {
       ],
       "category": Blockly.Categories.sensing,
       "extensions": ["colours_sensing", "shape_statement"]
+    });
+  }
+};
+
+Blockly.Blocks['sensing_tb_inlineAsk'] = {
+  /**
+   * Block to ask a question and wait
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": 'ask %1 and wait',
+      "args0": [
+        {
+          "type": "input_value",
+          "name": "QUESTION"
+        }
+      ],
+      "category": Blockly.Categories.sensing,
+      "extensions": ["colours_sensing", "output_number"]
     });
   }
 };

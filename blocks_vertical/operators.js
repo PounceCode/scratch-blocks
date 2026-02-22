@@ -124,6 +124,30 @@ Blockly.Blocks['operator_divide'] = {
   }
 };
 
+Blockly.Blocks['operator_tb_power'] = {
+  /**
+   * Block for dividing two numbers.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": '%1 ^ %2',
+      "args0": [
+        {
+          "type": "input_value",
+          "name": "ONE"
+        },
+        {
+          "type": "input_value",
+          "name": "TWO"
+        }
+      ],
+      "category": Blockly.Categories.operators,
+      "extensions": ["colours_operators", "output_number"]
+    });
+  }
+};
+
 Blockly.Blocks['operator_random'] = {
   /**
    * Block for picking a random number.
@@ -192,6 +216,51 @@ Blockly.Blocks['operator_equals'] = {
       ],
       "category": Blockly.Categories.operators,
       "extensions": ["colours_operators", "output_boolean"]
+    });
+  }
+};
+
+Blockly.Blocks['operator_tb_exactEquals'] = {
+  init: function() {
+    this.jsonInit({
+      "message0": '%1 exactly equals %2',
+      "args0": [
+        {
+          "type": "input_value",
+          "name": "ONE"
+        },
+        {
+          "type": "input_value",
+          "name": "TWO"
+        }
+      ],
+      "category": Blockly.Categories.operators,
+      "extensions": ["colours_operators", "output_boolean"]
+    });
+  }
+};
+
+Blockly.Blocks['operator_tb_inlineIf'] = {
+  init: function() {
+    this.jsonInit({
+      "message0": `if %1 then %2 else %3`,
+      "args0": [
+        {
+          "type": "input_value",
+          "name": "CONDITION",
+          "check": "Boolean"
+        },
+        {
+          "type": "input_value",
+          "name": "IFTRUE"
+        },
+        {
+          "type": "input_value",
+          "name": "IFFALSE"
+        }
+      ],
+      "category": Blockly.Categories.operators,
+      "extensions": ["colours_operators", "output_string"]
     });
   }
 };
@@ -293,6 +362,62 @@ Blockly.Blocks['operator_not'] = {
   }
 };
 
+Blockly.Blocks['operator_tb_true'] = {
+  init: function() {
+    this.jsonInit({
+      "message0": 'true',
+      "category": Blockly.Categories.operators,
+      "extensions": ["colours_operators", "output_boolean"]
+    });
+  }
+};
+
+Blockly.Blocks['operator_tb_false'] = {
+  init: function() {
+    this.jsonInit({
+      "message0": 'false',
+      "category": Blockly.Categories.operators,
+      "extensions": ["colours_operators", "output_boolean"]
+    });
+  }
+};
+
+Blockly.Blocks['operator_tb_newLine'] = {
+  init: function() {
+    this.jsonInit({
+      "message0": 'new line',
+      "category": Blockly.Categories.operators,
+      "extensions": ["colours_operators", "output_string"]
+    });
+  }
+};
+
+Blockly.Blocks['operator_tb_pi'] = {
+  init: function() {
+    this.jsonInit({
+      "message0": 'pi',
+      "category": Blockly.Categories.operators,
+      "extensions": ["colours_operators", "output_string"]
+    });
+  }
+};Blockly.Blocks['operator_tb_e'] = {
+  init: function() {
+    this.jsonInit({
+      "message0": 'e',
+      "category": Blockly.Categories.operators,
+      "extensions": ["colours_operators", "output_string"]
+    });
+  }
+};Blockly.Blocks['operator_tb_infinity'] = {
+  init: function() {
+    this.jsonInit({
+      "message0": 'infinity',
+      "category": Blockly.Categories.operators,
+      "extensions": ["colours_operators", "output_string"]
+    });
+  }
+};
+
 Blockly.Blocks['operator_join'] = {
   /**
    * Block for string join operator.
@@ -313,6 +438,70 @@ Blockly.Blocks['operator_join'] = {
       ],
       "category": Blockly.Categories.operators,
       "extensions": ["colours_operators", "output_string"]
+    });
+  }
+};
+
+Blockly.Blocks['operator_tb_substring'] = {
+  init: function() {
+    this.jsonInit({
+      "message0": 'letters %1 to %2 of %3',
+      "args0": [
+        {
+          "type": "input_value",
+          "name": "START"
+        },
+        {
+          "type": "input_value",
+          "name": "END"
+        },
+        {
+          "type": "input_value",
+          "name": "TEXT"
+        }
+      ],
+      "category": Blockly.Categories.operators,
+      "extensions": ["colours_operators", "output_string"]
+    });
+  }
+};
+
+Blockly.Blocks['operator_tb_startsWith'] = {
+  init: function() {
+    this.jsonInit({
+      "message0": '%1 starts with %2',
+      "args0": [
+        {
+          "type": "input_value",
+          "name": "TEXT"
+        },
+        {
+          "type": "input_value",
+          "name": "STARTS"
+        }
+      ],
+      "category": Blockly.Categories.operators,
+      "extensions": ["colours_operators", "output_boolean"]
+    });
+  }
+};
+
+Blockly.Blocks['operator_tb_endsWith'] = {
+  init: function() {
+    this.jsonInit({
+      "message0": '%1 ends with %2',
+      "args0": [
+        {
+          "type": "input_value",
+          "name": "TEXT"
+        },
+        {
+          "type": "input_value",
+          "name": "ENDS"
+        }
+      ],
+      "category": Blockly.Categories.operators,
+      "extensions": ["colours_operators", "output_boolean"]
     });
   }
 };

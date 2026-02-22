@@ -100,6 +100,16 @@ Blockly.Blocks['motion_turnleft'] = {
   }
 };
 
+Blockly.Blocks['motion_tb_turnAround'] = {
+    init: function() {
+        this.jsonInit({
+            "message0": "turn around",
+            "category": Blockly.Categories.motion,
+            "extensions": ["colours_motion", "shape_statement"]
+        });
+    }
+};
+
 Blockly.Blocks['motion_pointindirection'] = {
   /**
    * Block to point in direction.
@@ -167,6 +177,26 @@ Blockly.Blocks['motion_pointtowards'] = {
   }
 };
 
+Blockly.Blocks['motion_tb_pointTowardsXY'] = {
+  init: function() {
+    this.jsonInit({
+      "message0": "point towards x: %1 y: %2",
+      "args0": [
+        {
+          "type": "input_value",
+          "name": "X"
+        },
+        {
+          "type": "input_value",
+          "name": "Y"
+        }
+      ],
+      "category": Blockly.Categories.motion,
+      "extensions": ["colours_motion", "shape_statement"]
+    });
+  }
+};
+
 Blockly.Blocks['motion_goto_menu'] = {
   /**
    * Go to drop-down menu.
@@ -202,6 +232,30 @@ Blockly.Blocks['motion_gotoxy'] = {
   init: function() {
     this.jsonInit({
       "message0": Blockly.Msg.MOTION_GOTOXY,
+      "args0": [
+        {
+          "type": "input_value",
+          "name": "X"
+        },
+        {
+          "type": "input_value",
+          "name": "Y"
+        }
+      ],
+      "category": Blockly.Categories.motion,
+      "extensions": ["colours_motion", "shape_statement"]
+    });
+  }
+};
+
+Blockly.Blocks['motion_tb_goToXYWithoutFencing'] = {
+  /**
+   * Block to go to X, Y.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": 'go to x: %1 y: %2 without fencing',
       "args0": [
         {
           "type": "input_value",

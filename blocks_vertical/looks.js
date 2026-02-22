@@ -280,6 +280,22 @@ Blockly.Blocks['looks_setsizeto'] = {
   }
 };
 
+Blockly.Blocks['looks_tb_forceSetSize'] = {
+  init: function() {
+    this.jsonInit({
+      "message0": 'force set size to %1 %',
+      "args0": [
+        {
+          "type": "input_value",
+          "name": "SIZE"
+        }
+      ],
+      "category": Blockly.Categories.looks,
+      "extensions": ["colours_looks", "shape_statement"]
+    });
+  }
+};
+
 Blockly.Blocks['looks_size'] = {
   /**
    * Block to report size
@@ -401,6 +417,26 @@ Blockly.Blocks['looks_nextcostume'] = {
   init: function() {
     this.jsonInit({
       "message0": Blockly.Msg.LOOKS_NEXTCOSTUME,
+      "category": Blockly.Categories.looks,
+      "extensions": ["colours_looks", "shape_statement"]
+    });
+  }
+};
+
+Blockly.Blocks['looks_tb_previousCostume'] = {
+  init: function() {
+    this.jsonInit({
+      "message0": 'previous costume',
+      "category": Blockly.Categories.looks,
+      "extensions": ["colours_looks", "shape_statement"]
+    });
+  }
+};
+
+Blockly.Blocks['looks_tb_previousBackdrop'] = {
+  init: function() {
+    this.jsonInit({
+      "message0": 'previous backdrop',
       "category": Blockly.Categories.looks,
       "extensions": ["colours_looks", "shape_statement"]
     });
