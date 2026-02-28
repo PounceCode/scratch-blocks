@@ -380,6 +380,42 @@ Blockly.Blocks['control_for_each'] = {
   }
 };
 
+Blockly.Blocks['control_tb_for'] = {
+  init: function() {
+    this.jsonInit({
+      "type": "control_tb_for",
+      "message0": 'for each %1 in %2 to %3 step: %4',
+      "message1": "%1",
+      "args0": [
+        {
+          "type": "field_variable",
+          "name": "VARIABLE"
+        },
+        {
+          "type": "input_value",
+          "name": "START"
+        },
+        {
+          "type": "input_value",
+          "name": "STOP"
+        },
+        {
+          "type": "input_value",
+          "name": "STEP"
+        }
+      ],
+      "args1": [
+        {
+          "type": "input_statement",
+          "name": "SUBSTACK"
+        }
+      ],
+      "category": Blockly.Categories.control,
+      "extensions": ["colours_control", "shape_statement"]
+    });
+  }
+};
+
 Blockly.Blocks['control_start_as_clone'] = {
   /**
    * Block for "when I start as a clone" hat.
