@@ -156,6 +156,34 @@ Blockly.Blocks['sensing_tb_distanceToXY'] = {
   }
 };
 
+Blockly.Blocks['sensing_tb_distanceFromXYToXY'] = {
+
+  init: function() {
+    this.jsonInit({
+      "message0": 'distance from %1 %2 to %3 %4',
+      "args0": [
+        {
+          "type": "input_value",
+          "name": "X1"
+        },
+        {
+          "type": "input_value",
+          "name": "Y1"
+        },
+        {
+          "type": "input_value",
+          "name": "X2"
+        },
+        {
+          "type": "input_value",
+          "name": "Y2"
+        }
+      ],
+      "category": Blockly.Categories.sensing,
+      "extensions": ["colours_sensing", "output_number"]
+    });
+  }
+};
 
 Blockly.Blocks['sensing_distancetomenu'] = {
   /**

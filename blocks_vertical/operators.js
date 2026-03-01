@@ -289,6 +289,46 @@ Blockly.Blocks['operator_gt'] = {
   }
 };
 
+Blockly.Blocks['operator_tb_gtOrEqual'] = {
+  init: function() {
+    this.jsonInit({
+      "message0": '%1 ≥ %2',
+      "args0": [
+        {
+          "type": "input_value",
+          "name": "OPERAND1"
+        },
+        {
+          "type": "input_value",
+          "name": "OPERAND2"
+        }
+      ],
+      "category": Blockly.Categories.operators,
+      "extensions": ["colours_operators", "output_boolean"]
+    });
+  }
+};
+
+Blockly.Blocks['operator_tb_ltOrEqual'] = {
+  init: function() {
+    this.jsonInit({
+      "message0": '%1 ≤ %2',
+      "args0": [
+        {
+          "type": "input_value",
+          "name": "OPERAND1"
+        },
+        {
+          "type": "input_value",
+          "name": "OPERAND2"
+        }
+      ],
+      "category": Blockly.Categories.operators,
+      "extensions": ["colours_operators", "output_boolean"]
+    });
+  }
+};
+
 Blockly.Blocks['operator_and'] = {
   /**
    * Block for "and" boolean comparator.
@@ -582,6 +622,26 @@ Blockly.Blocks['operator_mod'] = {
   init: function() {
     this.jsonInit({
       "message0": Blockly.Msg.OPERATORS_MOD,
+      "args0": [
+        {
+          "type": "input_value",
+          "name": "NUM1"
+        },
+        {
+          "type": "input_value",
+          "name": "NUM2"
+        }
+      ],
+      "category": Blockly.Categories.operators,
+      "extensions": ["colours_operators", "output_number"]
+    });
+  }
+};
+
+Blockly.Blocks['operator_tb_atan2'] = {
+  init: function() {
+    this.jsonInit({
+      "message0": 'atan2 of x: %1 y: %2',
       "args0": [
         {
           "type": "input_value",
